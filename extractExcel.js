@@ -1,16 +1,16 @@
 const XLSX = require('xlsx');
 
 // Load the Excel file
-const workbook = XLSX.readFile('Soon-OKXCryptopedia.xlsx'); // Replace with your file name
+const workbook = XLSX.readFile('MantleSurge.xlsx'); // Replace with your file name
 const sheetName = workbook.SheetNames[0]; // Get the first sheet
 const worksheet = workbook.Sheets[sheetName];
 
 // Convert sheet to JSON format
 const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
-const B = jsonData.map(row => row[1]).filter(cell => cell !== undefined);
+const B = jsonData.map(row => row[0]).filter(cell => cell !== undefined);
 
-const C = jsonData.map(row => row[2]).filter(cell => cell !== undefined);
+const C = jsonData.map(row => row[1]).filter(cell => cell !== undefined);
 
 
 for (let i = 0; i < 10; i++) {

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const XLSX = require('xlsx');
 
-const datas = fs.readFileSync('xxx3.txt', 'utf8');
+const datas = fs.readFileSync('500xko2fa.txt', 'utf8');
 
 const strAccounts = datas.split(/\r?\n|\r|\n/g).map(e => e.split("|"))
 
@@ -40,6 +40,6 @@ const workbook = XLSX.utils.book_new();
 XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
 
 // Write the workbook to an Excel file
-XLSX.writeFile(workbook, 'xxx3.xlsx');
+XLSX.writeFile(workbook, '500xko2fa.xlsx');
 
 console.log('Excel file has been created successfully.');
